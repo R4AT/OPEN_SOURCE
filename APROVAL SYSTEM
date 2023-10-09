@@ -1,0 +1,17 @@
+def approval():
+	frist="RX["
+	last="]RX"
+	uuid=str(os.getuid()) + str(os.getlogin())
+	key = "6".join(uuid)
+	ress=httpx.get("https://github.com/RAFATMAX/NOT-X/blame/main/Aprove.txt").text
+	if key in ress:
+		Main()
+	else:
+		print("YOUR KEY IS NOT APPROVED")
+		os.system("clear")
+		print(logo)
+		print("TOOL IS FREE BUT NEED PERMISSION ")
+		print("Your key : "+frist+key+last)
+		print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+		os.system("xdg-open https://wa.me/+8801993555657")
+approval()
